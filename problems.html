@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Code Eva - Problems</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body data-page="problems">
+    <div class="cursor-dot"></div>
+    <div class="cursor-ring"></div>
+    <div class="bg-grid"></div>
+    <div class="neon-overlay"></div>
+
+    <header class="nav nav-authenticated">
+      <div class="nav-left">
+        <a href="index.html" class="logo-link">
+          <div class="logo-mark">∑</div>
+          <div class="logo-text">
+            <span>Code Eva</span>
+            <span>Code Evaluation System</span>
+          </div>
+        </a>
+      </div>
+      <nav class="nav-links">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="dashboard.html" class="nav-link">Dashboard</a>
+        <a href="problems.html" class="nav-link active">Problems</a>
+        <a href="dataset.html" class="nav-link">Dataset</a>
+        <a href="history.html" class="nav-link">History</a>
+        <a href="assistant.html" class="nav-link">AI Assistant</a>
+      </nav>
+      <div class="nav-user">
+        <span id="nav-username"></span>
+        <button id="logout-btn" class="btn btn-ghost-small">Logout</button>
+      </div>
+    </header>
+
+    <main class="page">
+      <section class="card-glass">
+        <h2 class="section-title">Problem set</h2>
+        <p class="section-subtitle">
+          Search and filter through at least
+          <span class="text-accent">50</span> curated Python problems.
+        </p>
+
+        <div class="problem-filters">
+          <input
+            type="text"
+            id="problem-search"
+            placeholder="Search by title, id, or tags..."
+          />
+          <select id="problem-difficulty">
+            <option value="all">All difficulties</option>
+            <option value="easy">Easy</option>
+            <option value="medium">Medium</option>
+            <option value="hard">Hard</option>
+          </select>
+        </div>
+
+        <div class="table-wrapper">
+          <table class="neon-table" id="problems-table">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Title</th>
+                <th>Difficulty</th>
+                <th>Topics</th>
+                <th>Solved?</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Populated by JS -->
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+
+    <script src="data.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
+

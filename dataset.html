@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Code Eva - Dataset</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body data-page="dataset">
+    <div class="cursor-dot"></div>
+    <div class="cursor-ring"></div>
+    <div class="bg-grid"></div>
+    <div class="neon-overlay"></div>
+
+    <header class="nav nav-authenticated">
+      <div class="nav-left">
+        <a href="index.html" class="logo-link">
+          <div class="logo-mark">∑</div>
+          <div class="logo-text">
+            <span>Code Eva</span>
+            <span>Code Evaluation System</span>
+          </div>
+        </a>
+      </div>
+      <nav class="nav-links">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="dashboard.html" class="nav-link">Dashboard</a>
+        <a href="problems.html" class="nav-link">Problems</a>
+        <a href="dataset.html" class="nav-link active">Dataset</a>
+        <a href="history.html" class="nav-link">History</a>
+        <a href="assistant.html" class="nav-link">AI Assistant</a>
+      </nav>
+      <div class="nav-user">
+        <span id="nav-username"></span>
+        <button id="logout-btn" class="btn btn-ghost-small">Logout</button>
+      </div>
+    </header>
+
+    <main class="page dataset-grid">
+      <section class="card-glass">
+        <h2 class="section-title">Dataset overview</h2>
+        <p class="section-subtitle">
+          A neon-lit snapshot over all your problems, scores, and submissions.
+        </p>
+        <div class="stats-grid" id="dataset-stats">
+          <!-- Populated via JS -->
+        </div>
+      </section>
+
+      <section class="card-glass">
+        <h2 class="section-title">Problem-level performance</h2>
+        <p class="section-subtitle">
+          Each row represents a problem with aggregated submission data.
+        </p>
+        <div class="table-wrapper">
+          <table class="neon-table" id="dataset-table">
+            <thead>
+              <tr>
+                <th>Problem</th>
+                <th>Attempts</th>
+                <th>Best Score</th>
+                <th>Average Score</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- JS -->
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+
+    <script src="data.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
+

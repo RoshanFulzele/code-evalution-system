@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Code Eva - History</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body data-page="history">
+    <div class="cursor-dot"></div>
+    <div class="cursor-ring"></div>
+    <div class="bg-grid"></div>
+    <div class="neon-overlay"></div>
+
+    <header class="nav nav-authenticated">
+      <div class="nav-left">
+        <a href="index.html" class="logo-link">
+          <div class="logo-mark">∑</div>
+          <div class="logo-text">
+            <span>Code Eva</span>
+            <span>Code Evaluation System</span>
+          </div>
+        </a>
+      </div>
+      <nav class="nav-links">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="dashboard.html" class="nav-link">Dashboard</a>
+        <a href="problems.html" class="nav-link">Problems</a>
+        <a href="dataset.html" class="nav-link">Dataset</a>
+        <a href="history.html" class="nav-link active">History</a>
+        <a href="assistant.html" class="nav-link">AI Assistant</a>
+      </nav>
+      <div class="nav-user">
+        <span id="nav-username"></span>
+        <button id="logout-btn" class="btn btn-ghost-small">Logout</button>
+      </div>
+    </header>
+
+    <main class="page">
+      <section class="card-glass">
+        <h2 class="section-title">Submission history</h2>
+        <p class="section-subtitle">
+          Every submission for this user, with status, timestamp, and score.
+        </p>
+
+        <div class="problem-filters">
+          <select id="history-status-filter">
+            <option value="all">All statuses</option>
+            <option value="success">Success only</option>
+            <option value="partial">Partial</option>
+            <option value="failed">Failed</option>
+          </select>
+        </div>
+
+        <div class="table-wrapper">
+          <table class="neon-table" id="history-table">
+            <thead>
+              <tr>
+                <th>When</th>
+                <th>Problem</th>
+                <th>Status</th>
+                <th>Score</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- JS -->
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+
+    <script src="data.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
+

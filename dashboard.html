@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Code Eva - Dashboard</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body data-page="dashboard">
+    <div class="cursor-dot"></div>
+    <div class="cursor-ring"></div>
+    <div class="bg-grid"></div>
+    <div class="neon-overlay"></div>
+
+    <!-- Navbar -->
+    <header class="nav nav-authenticated">
+      <div class="nav-left">
+        <a href="index.html" class="logo-link">
+          <div class="logo-mark">∑</div>
+          <div class="logo-text">
+            <span>Code Eva</span>
+            <span>Code Evaluation System</span>
+          </div>
+        </a>
+      </div>
+      <nav class="nav-links">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="dashboard.html" class="nav-link active">Dashboard</a>
+        <a href="problems.html" class="nav-link">Problems</a>
+        <a href="dataset.html" class="nav-link">Dataset</a>
+        <a href="history.html" class="nav-link">History</a>
+        <a href="assistant.html" class="nav-link">AI Assistant</a>
+      </nav>
+      <div class="nav-user">
+        <span id="nav-username"></span>
+        <button id="logout-btn" class="btn btn-ghost-small">Logout</button>
+      </div>
+    </header>
+
+    <!-- Dashboard Content -->
+    <main class="page dashboard-grid">
+      <!-- Stats -->
+      <section class="card-glass stats-panel">
+        <h2 class="section-title">Snapshot</h2>
+        <p class="section-subtitle">
+          Live metrics based on your local submissions dataset.
+        </p>
+        <div class="stats-grid">
+          <div class="stat-card">
+            <span class="stat-label">Problems Solved</span>
+            <span class="stat-value" id="stat-problems-solved">0</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-label">Total Submissions</span>
+            <span class="stat-value" id="stat-submissions">0</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-label">Average Score</span>
+            <span class="stat-value" id="stat-average-score">0</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-label">Last Submission</span>
+            <span class="stat-value" id="stat-last-submission">–</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Quick Actions -->
+      <section class="card-glass quick-panel">
+        <h2 class="section-title">Quick launch</h2>
+        <p class="section-subtitle">
+          Jump straight into solving, browsing, or reviewing history.
+        </p>
+        <div class="quick-actions">
+          <a href="problems.html" class="quick-card">
+            <span class="quick-title">Browse Problems</span>
+            <span class="quick-sub">50+ neon-coded tasks</span>
+          </a>
+          <a href="dataset.html" class="quick-card">
+            <span class="quick-title">Dataset View</span>
+            <span class="quick-sub">Scores and aggregates</span>
+          </a>
+          <a href="history.html" class="quick-card">
+            <span class="quick-title">Submission History</span>
+            <span class="quick-sub">Track your attempts</span>
+          </a>
+          <a href="assistant.html" class="quick-card">
+            <span class="quick-title">AI Assistant</span>
+            <span class="quick-sub">Ask for coding hints</span>
+          </a>
+        </div>
+      </section>
+
+      <!-- Activity -->
+      <section class="card-glass activity-panel">
+        <h2 class="section-title">Recent activity</h2>
+        <p class="section-subtitle">
+          Latest submissions for this user, most recent first.
+        </p>
+        <div class="table-wrapper">
+          <table class="neon-table" id="dashboard-activity">
+            <thead>
+              <tr>
+                <th>When</th>
+                <th>Problem</th>
+                <th>Status</th>
+                <th>Score</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Populated via JS -->
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+
+    <script src="data.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
+

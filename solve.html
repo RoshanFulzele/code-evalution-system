@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Code Eva - Solve</title>
+    <link rel="stylesheet" href="styles.css" />
+    <!-- Skulpt for in-browser Python -->
+    <script src="https://cdn.jsdelivr.net/npm/skulpt@1.2.0/dist/skulpt.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/skulpt@1.2.0/dist/skulpt-stdlib.js"></script>
+  </head>
+  <body data-page="solve">
+    <div class="cursor-dot"></div>
+    <div class="cursor-ring"></div>
+    <div class="bg-grid"></div>
+    <div class="neon-overlay"></div>
+
+    <header class="nav nav-authenticated">
+      <div class="nav-left">
+        <a href="index.html" class="logo-link">
+          <div class="logo-mark">∑</div>
+          <div class="logo-text">
+            <span>Code Eva</span>
+            <span>Code Evaluation System</span>
+          </div>
+        </a>
+      </div>
+      <nav class="nav-links">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="dashboard.html" class="nav-link">Dashboard</a>
+        <a href="problems.html" class="nav-link">Problems</a>
+        <a href="dataset.html" class="nav-link">Dataset</a>
+        <a href="history.html" class="nav-link">History</a>
+        <a href="assistant.html" class="nav-link">AI Assistant</a>
+      </nav>
+      <div class="nav-user">
+        <span id="nav-username"></span>
+        <button id="logout-btn" class="btn btn-ghost-small">Logout</button>
+      </div>
+    </header>
+
+    <main class="page solve-grid">
+      <!-- Problem Description -->
+      <section class="card-glass solve-problem">
+        <div class="solve-header">
+          <div>
+            <h2 class="section-title" id="solve-title">Loading problem...</h2>
+            <p class="section-subtitle" id="solve-meta"></p>
+          </div>
+          <a href="problems.html" class="btn btn-ghost-small">← Back to list</a>
+        </div>
+        <div id="solve-description" class="solve-description"></div>
+      </section>
+
+      <!-- Editor & Console -->
+      <section class="card-glass solve-editor">
+        <div class="editor-header">
+          <span>Python editor</span>
+          <span class="editor-status" id="editor-status">idle</span>
+        </div>
+        <textarea id="code-editor" spellcheck="false"></textarea>
+        <div class="editor-actions">
+          <button id="run-code" class="btn btn-secondary">Run</button>
+          <button id="submit-code" class="btn btn-primary">Submit &amp; Evaluate</button>
+          <span class="editor-note"
+            >Editor runs entirely in your browser using
+            <span class="text-accent">Skulpt</span>.</span
+          >
+        </div>
+        <div class="console card-glass-soft">
+          <div class="console-header">
+            <span>Console</span>
+            <span id="console-status" class="badge badge-idle">waiting</span>
+          </div>
+          <pre id="console-output" class="console-output"></pre>
+        </div>
+      </section>
+
+      <!-- Result & Meta -->
+      <section class="card-glass solve-meta-panel">
+        <h2 class="section-title">Submission result</h2>
+        <div class="result-grid">
+          <div class="result-card">
+            <span class="stat-label">Status</span>
+            <span class="stat-value" id="result-status">–</span>
+          </div>
+          <div class="result-card">
+            <span class="stat-label">Score</span>
+            <span class="stat-value" id="result-score">–</span>
+          </div>
+          <div class="result-card">
+            <span class="stat-label">Tests Passed</span>
+            <span class="stat-value" id="result-tests">–</span>
+          </div>
+          <div class="result-card">
+            <span class="stat-label">Last Run</span>
+            <span class="stat-value" id="result-time">–</span>
+          </div>
+        </div>
+        <p class="section-subtitle small">
+          Evaluation uses a per-problem Python harness that runs hidden tests
+          and reports how many cases passed.
+        </p>
+      </section>
+    </main>
+
+    <script src="data.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
+
