@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Meta -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Code Eva - Welcome</title>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body data-page="welcome">
+    <!-- Custom Cursor -->
+    <div class="cursor-dot"></div>
+    <div class="cursor-ring"></div>
+
+    <!-- Animated Background Grid -->
+    <div class="bg-grid"></div>
+
+    <!-- Global Neon Overlay -->
+    <div class="neon-overlay"></div>
+
+    <!-- Navbar -->
+    <header class="nav">
+      <div class="nav-left">
+        <div class="logo-mark">∑</div>
+        <div class="logo-text">
+          <span>Code Eva</span>
+          <span>Code Evaluation System</span>
+        </div>
+      </div>
+      <nav class="nav-links">
+        <a href="index.html" class="nav-link active">Home</a>
+        <a href="login.html" class="nav-link">Login</a>
+        <a href="dashboard.html" class="nav-link">Dashboard</a>
+      </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <main class="page page-center hero">
+      <section class="hero-content card-glass">
+        <div class="hero-badge">v1.0 • Client-side • Python-ready</div>
+        <h1 class="hero-title">
+          Code Evaluation<br />
+          <span class="hero-gradient">Reimagined</span>
+        </h1>
+        <p class="hero-subtitle">
+          Run Python in your browser, score your solutions, track your learning
+          dataset, and explore a fully neon-infused coding environment.
+        </p>
+
+        <div class="hero-cta">
+          <a href="login.html" class="btn btn-primary">Login &nbsp;→</a>
+          <a href="login.html#register" class="btn btn-secondary"
+            >Create Account</a
+          >
+        </div>
+
+        <div class="hero-meta">
+          <div class="hero-metric">
+            <span class="metric-label">Storage</span>
+            <span class="metric-value">Local browser dataset</span>
+          </div>
+          <div class="hero-metric">
+            <span class="metric-label">Runtime</span>
+            <span class="metric-value">Python via Skulpt</span>
+          </div>
+          <div class="hero-metric">
+            <span class="metric-label">Problems</span>
+            <span class="metric-value">50+ practice tasks</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="hero-panel card-glass">
+        <div class="panel-header">
+          <span class="dot dot-red"></span>
+          <span class="dot dot-amber"></span>
+          <span class="dot dot-green"></span>
+        </div>
+        <div class="panel-body hero-terminal">
+          <div class="terminal-line">
+            <span class="prompt">code-eva</span> $ boot
+          </div>
+          <div class="terminal-line fade-in-1">
+            scanning <span class="text-accent">localStorage</span> for users...
+          </div>
+          <div class="terminal-line fade-in-2">
+            loading <span class="text-accent">problem set</span> (50+ tasks)...
+          </div>
+          <div class="terminal-line fade-in-3">
+            mounting <span class="text-accent">python sandbox</span>...
+          </div>
+          <div class="terminal-line fade-in-4 success">
+            ready. <span class="text-accent">/login</span> to continue.
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Scripts -->
+    <script src="data.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
+

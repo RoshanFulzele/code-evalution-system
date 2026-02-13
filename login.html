@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Meta -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Code Eva - Login</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body data-page="login">
+    <div class="cursor-dot"></div>
+    <div class="cursor-ring"></div>
+    <div class="bg-grid"></div>
+    <div class="neon-overlay"></div>
+
+    <!-- Navbar -->
+    <header class="nav">
+      <div class="nav-left">
+        <div class="logo-mark">∑</div>
+        <div class="logo-text">
+          <span>Code Eva</span>
+          <span>Code Evaluation System</span>
+        </div>
+      </div>
+      <nav class="nav-links">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="login.html" class="nav-link active">Login</a>
+        <a href="dashboard.html" class="nav-link">Dashboard</a>
+      </nav>
+    </header>
+
+    <!-- Auth Container -->
+    <main class="page page-center auth-page">
+      <section class="auth-card card-glass">
+        <div class="auth-toggle">
+          <button class="auth-tab active" data-mode="login">Login</button>
+          <button class="auth-tab" data-mode="register">Register</button>
+        </div>
+
+        <!-- Login Form -->
+        <form class="auth-form" id="login-form">
+          <h2 class="section-title">Welcome back</h2>
+          <p class="section-subtitle">
+            Sign in to access your dashboard, problems, and history.
+          </p>
+
+          <label class="field">
+            <span>Username</span>
+            <input
+              type="text"
+              id="login-username"
+              autocomplete="username"
+              required
+            />
+          </label>
+
+          <label class="field">
+            <span>Password</span>
+            <input
+              type="password"
+              id="login-password"
+              autocomplete="current-password"
+              required
+            />
+          </label>
+
+          <div class="form-footer">
+            <button type="submit" class="btn btn-primary">Login</button>
+            <span class="form-hint"
+              >Hint: accounts are stored locally in your browser.</span
+            >
+          </div>
+          <div class="form-message" id="login-message"></div>
+        </form>
+
+        <!-- Register Form -->
+        <form class="auth-form hidden" id="register-form">
+          <h2 class="section-title">Create account</h2>
+          <p class="section-subtitle">
+            Your problems, submissions, and scores stay in your browser.
+          </p>
+
+          <label class="field">
+            <span>Username</span>
+            <input
+              type="text"
+              id="register-username"
+              autocomplete="off"
+              required
+            />
+          </label>
+
+          <label class="field">
+            <span>Email (optional)</span>
+            <input type="email" id="register-email" autocomplete="off" />
+          </label>
+
+          <label class="field">
+            <span>Password</span>
+            <input
+              type="password"
+              id="register-password"
+              autocomplete="new-password"
+              required
+            />
+          </label>
+
+          <label class="field">
+            <span>Confirm Password</span>
+            <input
+              type="password"
+              id="register-confirm"
+              autocomplete="new-password"
+              required
+            />
+          </label>
+
+          <div class="form-footer">
+            <button type="submit" class="btn btn-primary">Register</button>
+            <span class="form-hint"
+              >No backend. Data uses <span class="text-accent">localStorage</span>.</span
+            >
+          </div>
+          <div class="form-message" id="register-message"></div>
+        </form>
+      </section>
+    </main>
+
+    <script src="data.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
+
